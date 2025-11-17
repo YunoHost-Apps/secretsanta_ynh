@@ -1,1 +1,1 @@
-This is a dummy description of this app features
+Host your secret santas without leaking your guests' informations 
