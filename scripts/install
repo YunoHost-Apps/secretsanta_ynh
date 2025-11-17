@@ -26,9 +26,7 @@ ynh_config_add --template=".env" --destination="$install_dir/.env"
 ynh_script_progression "Building $app..."
 
 pushd "$install_dir"
-    corepack enable
-    ynh_hide_warnings corepack prepare  yarn@latest --activate
-	
+    corepack enable && yarn
 	ynh_hide_warnings ynh_exec_as_app yarn install
     ynh_hide_warnings ynh_exec_as_app VITE_BASE_URL=$domain yarn vite build
     ynh_hide_warnings ynh_exec_as_app yarn cache clean
