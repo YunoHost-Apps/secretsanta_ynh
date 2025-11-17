@@ -23,6 +23,7 @@ ynh_config_add --template=".env" --destination="$install_dir/.env"
 #=================================================
 # BUILD YARN DEPENDENCIES
 #=================================================
+ynh_script_progression "Building $app..."
 
 pushd "$install_dir"
     corepack enable
