@@ -34,13 +34,13 @@ ynh_script_progression "Building $app..."
 
 pushd "$install_dir"
     corepack enable
-    ynh_hide_warnings corepack prepare  yarn@latest --activate
+    ynh_hide_warnings corepack prepare yarn@latest --activate
 	
-	ynh_hide_warnings ynh_exec_as_app CI=true yarn
-	ynh_hide_warnings ynh_exec_as_app CI=true yarn vitest
-    ynh_hide_warnings ynh_exec_as_app CI=true yarn vite build
-    ynh_hide_warnings ynh_exec_as_app CI=true yarn cache clean
+	ynh_hide_warnings ynh_exec_as_app yarn install
+    ynh_hide_warnings ynh_exec_as_app yarn vite build
+    ynh_hide_warnings ynh_exec_as_app yarn cache clean
 popd
+
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATION
