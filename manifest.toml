@@ -18,7 +18,7 @@ code = "https://github.com/arcanis/secretsanta"
 fund = "https://github.com/sponsors/arcanis"
 
 [integration]
-yunohost = ">= 12.1.30"
+yunohost = ">= 12.1.39"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
@@ -44,15 +44,12 @@ ram.runtime = "50M"
     default = "visitors"
 
 [resources]
-    # See the packaging documentation for the full set
-    # of explanation regarding the behavior and properties for each of those
 
     [resources.sources]
 
     [resources.sources.main]
     url = "https://github.com/arcanis/secretsanta/archive/bb6c56e78436bdefb61ab4155f5c69cbeddc80c9.tar.gz"
     sha256 = "129819960000372e2f125c3d1ab4c6729dbde2cccf2c2fd1b9d83706be85720d"
-
     autoupdate.strategy = "latest_github_commit"
 
     [resources.system_user]
@@ -62,7 +59,5 @@ ram.runtime = "50M"
     [resources.permissions]
     main.url = "/"
 
-    [resources.ports]
-
     [resources.nodejs]
-    version = "22"
+    version = "22.20"
