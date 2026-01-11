@@ -30,9 +30,13 @@ pushd "$install_dir"
     #ynh_hide_warnings corepack prepare yarn@latest --activate
 	
 	ynh_hide_warnings ynh_exec_as_app npm install
-    ynh_hide_warnings ynh_exec_as_app npx vite build
+    ynh_hide_warnings ynh_exec_as_app npx vite build --base=$path
     ynh_hide_warnings ynh_exec_as_app npm cache clean --force
 popd
+
+# Adapt default path_url
+ynh_replace --match="base: '/secretsanta/'," --replace="base: '$path'," --file="$install_dir/vite.config.ts"
+
 
 #=================================================
 # SYSTEM CONFIGURATION
