@@ -42,8 +42,6 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 
 ynh_config_add_nginx
 
-yunohost service add "$app" --description="$app service" --log="/var/log/$app/$app.log"
-
 ynh_config_add_logrotate
 
 #ynh_config_add_fail2ban --logpath="/var/log/nginx/${domain}-error.log" --failregex="Regex to match into the log for a failed login"
