@@ -31,7 +31,7 @@ pushd "$install_dir"
 	
 	ynh_hide_warnings ynh_exec_as_app npm install
     ynh_hide_warnings ynh_exec_as_app npx vite build
-    ynh_hide_warnings ynh_exec_as_app npm clear cache
+    ynh_hide_warnings ynh_exec_as_app npm cache clean --force
 popd
 
 #=================================================
