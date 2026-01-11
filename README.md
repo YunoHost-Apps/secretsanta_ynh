@@ -21,7 +21,7 @@ Randomly pair participants for a Secret Santa gift exchange.
 
 
 ## Screenshots
-![Screenshot of Secret Santa](./doc/screenshots/example.jpg)
+![Screenshot of Secret Santa](./doc/screenshots/secretsanta.png)
 
 ## 📦 Developer info
 
