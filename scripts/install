@@ -14,13 +14,6 @@ ynh_script_progression "Setting up source files..."
 ynh_setup_source --dest_dir="$install_dir"
 
 #=================================================
-# ADD A CONFIGURATION
-#=================================================
-ynh_script_progression "Adding $app's configuration..."
-
-ynh_config_add --template=".env" --destination="$install_dir/.env"
-
-#=================================================
 # BUILD YARN DEPENDENCIES
 #=================================================
 ynh_script_progression "Building $app..."
